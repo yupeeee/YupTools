@@ -6,8 +6,8 @@ Base structure for loading datasets used in image classification tasks.
 - [Parameters](#parameters)
 - [Attributes](#attributes)
 - Methods
-  - [__getitem\__](#getitem)
-  - [__len\__](#len)
+  - [\__getitem\__](#__getitem__)
+  - [\__len\__](#__len__)
   - [make_dataset](#makedataset)
   - [initialize](#initialize)
   - [data_and_targets_of_class_c](#dataandtargetsofclassc)
