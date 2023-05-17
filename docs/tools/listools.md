@@ -1,10 +1,11 @@
 # yuptools.tools.listools
 
-Functions that involve lists.
+Utility functions for working with lists.
 
 
 - [argmax_list](#argmaxlist)
 - [argmin_list](#argminlist)
+- [sort_str_list](#sortstrlist)
 
 
 ---
@@ -12,7 +13,8 @@ Functions that involve lists.
 
 ## argmax_list
 
-Returns the index of the largest value in a given list.
+Returns the index of the maximum value in a list.
+If multiple elements have the same maximum value, the index of the first occurrence is returned.
 
 ```
 max_idx: int = argmax_list(lst: List[Any],)
@@ -26,7 +28,7 @@ List containing elements that can be compared by size, magnitude, etc.
 ### Output
 
 - **max_idx** (*int*):
-Index of the largest value in a given list.
+The index of the maximum value.
 
 
 ---
@@ -34,7 +36,8 @@ Index of the largest value in a given list.
 
 ## argmin_list
 
-Returns the index of the smallest value in a given list.
+Returns the index of the minimum value in a list.
+If multiple elements have the same minimum value, the index of the first occurrence is returned.
 
 ```
 min_idx: int = argmin_list(lst: List[Any],)
@@ -48,4 +51,41 @@ List containing elements that can be compared by size, magnitude, etc.
 ### Output
 
 - **min_idx** (*int*):
-Index of the smallest value in a given list.
+The index of the minimum value.
+
+
+---
+
+
+## sort_str_list
+
+Sorts a list of strings alphabetically, considering numeric values within the strings.
+
+```
+sorted_str_list: List[str] = sort_str_list(
+    str_list: List[str],
+    return_indices: bool = False,
+)
+
+sorted_str_list: List[str], indices: List[int] = sort_str_list(
+    str_list: List[str],
+    return_indices: bool = True,
+)
+```
+
+### Input
+
+- **str_lst** (*list*):
+The list of strings to be sorted.
+
+- **return_indices** (*bool, optional*):
+Specifies whether to return the sorted indices along with the sorted strings.
+Default is *False*.
+  - If *True*, a tuple containing the sorted strings and the corresponding indices will be returned. 
+  - If *False*, only the sorted strings will be returned.
+
+### Output
+
+- **sorted_str_list** (*list*) (, **indices** (*list*)):
+The sorted list of strings,
+or a tuple containing the sorted list of strings and the corresponding indices (if ***return_indices*** is *True*).
