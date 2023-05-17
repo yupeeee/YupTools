@@ -6,8 +6,8 @@ Base structure for loading datasets used in image classification tasks.
 - [Parameters](#parameters)
 - [Attributes](#attributes)
 - Methods
-  - [\__getitem\__](#getitem)
-  - [\__len\__](#len)
+  - [\__getitem\__](#__getitem__)
+  - [\__len\__](#__len__)
   - [make_dataset](#make_dataset)
   - [initialize](#initialize)
   - [data_and_targets_of_class_c](#data_and_targets_of_class_c)
@@ -55,7 +55,7 @@ Class labels of dataset.
 ## Methods
 
 
-### *getitem*
+### \__getitem\__
 
 Returns the data and target at the given index of the dataset.
 
@@ -65,7 +65,7 @@ data: Any, target: Any = dataset[index: int]
 ```
 
 
-### *len*
+### \__len\__
 
 Returns the number of samples in the dataset.
 
