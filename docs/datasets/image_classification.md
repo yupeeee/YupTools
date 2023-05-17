@@ -3,7 +3,7 @@
 Common datasets and transforms used in image classification tasks.
 
 
-- [image_classification_transforms](#imageclassificationtransforms)<br/><br/>
+- [image_classification_transforms](#image_classification_transforms)<br/><br/>
 - [Caltech101](#caltech101)
 - [Caltech256](#caltech256)
 - [CIFAR10](#cifar10)

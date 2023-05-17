@@ -5,7 +5,7 @@ Utility functions for working with files and directories.
 
 - [mkdir](#mkdir)
 - [rmdir](#rmdir)
-- [join_path](#joinpath)
+- [join_path](#join_path)
 - [ext](#ext)
 - [ls](#ls)
 

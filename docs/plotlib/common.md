@@ -3,8 +3,8 @@
 Commonly used functions for plotting figures.
 
 
-- [chw_to_hwc](#chwtohwc)
-- [best_figsize_for_subplots](#bestfigsizeforsubplots)
+- [chw_to_hwc](#chw_to_hwc)
+- [best_figsize_for_subplots](#best_figsize_for_subplots)
 
 
 ---

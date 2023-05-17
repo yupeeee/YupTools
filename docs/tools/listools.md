@@ -3,9 +3,9 @@
 Utility functions for working with lists.
 
 
-- [argmax_list](#argmaxlist)
-- [argmin_list](#argminlist)
-- [sort_str_list](#sortstrlist)
+- [argmax_list](#argmax_list)
+- [argmin_list](#argmin_list)
+- [sort_str_list](#sort_str_list)
 
 
 ---
