@@ -11,3 +11,4 @@
     - [common](./docs/plotlib/common.md)
   - tools
     - [listools](./docs/tools/listools.md)
+    - [pathtools](./docs/tools/pathtools.md)
