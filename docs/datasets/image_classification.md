@@ -25,7 +25,7 @@ Type is *Dict[str, TRANSFORM]*.
 The transforms transform *Union[PIL.Image, numpy.ndarray]* to *torch.Tensor*.
 
 ```
-from yupeeee_pytools.datasets import image_classification_transforms as transforms
+from yuptools.datasets import image_classification_transforms as transforms
 
 transform = transforms["default"]
 ```
@@ -65,7 +65,7 @@ Convert a PIL Image or ndarray to tensor and scale the values accordingly.
 [Caltech 101](https://data.caltech.edu/records/mzrjq-6wc02) dataset.
 
 ```
-from yupeeee_pytools.datasets import Caltech101
+from yuptools.datasets import Caltech101
 
 dataset = Caltech101(
     root: str,
@@ -100,7 +100,7 @@ If dataset is already downloaded, it is not downloaded again.
 [Caltech 256](https://data.caltech.edu/records/nyy15-4j048) dataset.
 
 ```
-from yupeeee_pytools.datasets import Caltech256
+from yuptools.datasets import Caltech256
 
 dataset = Caltech256(
     root: str,
@@ -135,7 +135,7 @@ If dataset is already downloaded, it is not downloaded again.
 [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset.
 
 ```
-from yupeeee_pytools.datasets import CIFAR10
+from yuptools.datasets import CIFAR10
 
 dataset = CIFAR10(
     root: str,
@@ -174,7 +174,7 @@ If dataset is already downloaded, it is not downloaded again.
 [CIFAR-100](https://www.cs.toronto.edu/~kriz/cifar.html) dataset.
 
 ```
-from yupeeee_pytools.datasets import CIFAR100
+from yuptools.datasets import CIFAR100
 
 dataset = CIFAR100(
     root: str,
@@ -213,7 +213,7 @@ If dataset is already downloaded, it is not downloaded again.
 [The Country211 Dataset](https://github.com/openai/CLIP/blob/main/data/country211.md) from OpenAI.
 
 ```
-from yupeeee_pytools.datasets import Country211
+from yuptools.datasets import Country211
 
 dataset = Country211(
     root: str,
@@ -252,7 +252,7 @@ If dataset is already downloaded, it is not downloaded again.
 [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset.
 
 ```
-from yupeeee_pytools.datasets import FashionMNIST
+from yuptools.datasets import FashionMNIST
 
 dataset = FashionMNIST(
     root: str,
@@ -294,7 +294,7 @@ To download the dataset, create your ImageNet account <sup>[link](https://image-
 and download the dataset <sup>[link](https://image-net.org/challenges/LSVRC/2012/2012-downloads.php)</sup>.
 
 ```
-from yupeeee_pytools.datasets import ImageNet
+from yuptools.datasets import ImageNet
 
 dataset = ImageNet(
     root: str,
@@ -328,7 +328,7 @@ A function/transform that takes in the target and transforms it.
 [MNIST](https://yann.lecun.com/exdb/mnist/) dataset.
 
 ```
-from yupeeee_pytools.datasets import MNIST
+from yuptools.datasets import MNIST
 
 dataset = MNIST(
     root: str,

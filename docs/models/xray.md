@@ -6,7 +6,7 @@ Provides functionality for extracting features from a PyTorch model.
 - [get_layer_ids](#get_layer_ids)
 - [get_layer](#get_layer)
 </br></br>
-- [FeatureExtractor](#FeatureExtractor)
+- [FeatureExtractor](#featureextractor)
 
 
 ---
