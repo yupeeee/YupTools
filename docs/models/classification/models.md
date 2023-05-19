@@ -2,8 +2,85 @@
 
 Classification models trained on specific datasets.
 
-
+- [CIFAR10ClassificationModel](#cifar10classificationmodel)
+- [CIFAR100ClassificationModel](#cifar100classificationmodel)
 - [ImageNetClassificationModel](#imagenetclassificationmodel)
+
+
+---
+
+
+## CIFAR10ClassificationModel
+
+Initializes a CIFAR-10 classification model.
+
+```
+from yuptools.models import CIFAR10ClassificationModel
+
+model = CIFAR10ClassificationModel(
+    name: str,
+    weights_path: str = None,
+    mode: str = None,
+    use_cuda: bool = False,
+)
+```
+
+### Parameters
+
+- **name** (*str*):
+Name of the model.
+
+- **weights_path** (*str*):
+Path to the pretrained weights.
+If specified, loads the pretrained weights to the model.
+Default is *None*, i.e., *pretrained=False*.
+
+- **mode** (*str*):
+Mode of the model.
+Must be one of *[None, "train", "eval", ]*.
+Default is *None*.
+
+- **use_cuda** (*bool*):
+Specifies whether to use CUDA for GPU acceleration.
+Default is *False*.
+
+
+---
+
+
+## CIFAR100ClassificationModel
+
+Initializes a CIFAR-100 classification model.
+
+```
+from yuptools.models import CIFAR100ClassificationModel
+
+model = CIFAR100ClassificationModel(
+    name: str,
+    weights_path: str = None,
+    mode: str = None,
+    use_cuda: bool = False,
+)
+```
+
+### Parameters
+
+- **name** (*str*):
+Name of the model.
+
+- **weights_path** (*str*):
+Path to the pretrained weights.
+If specified, loads the pretrained weights to the model.
+Default is *None*, i.e., *pretrained=False*.
+
+- **mode** (*str*):
+Mode of the model.
+Must be one of *[None, "train", "eval", ]*.
+Default is *None*.
+
+- **use_cuda** (*bool*):
+Specifies whether to use CUDA for GPU acceleration.
+Default is *False*.
 
 
 ---
