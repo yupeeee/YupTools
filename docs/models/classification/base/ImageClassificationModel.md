@@ -31,7 +31,7 @@ ImageClassificationModel(
 )
 ```
 
-## Parameters
+## Properties
 
 - **name** (*str*):
 Name of the model.
