@@ -6,6 +6,8 @@ Utility functions for working with lists.
 - [argmax_list](#argmax_list)
 - [argmin_list](#argmin_list)
 - [sort_str_list](#sort_str_list)
+- [merge_list_of_lists](#merge_list_of_lists)
+- [merge_lists_in_dict](#merge_lists_in_dict)
 
 
 ---
@@ -89,3 +91,52 @@ Default is *False*.
 - **sorted_str_list** (*list*) (, **indices** (*list*)):
 The sorted list of strings,
 or a tuple containing the sorted list of strings and the corresponding indices (if ***return_indices*** is *True*).
+
+
+---
+
+
+## merge_list_of_lists
+
+Merges a list of lists into a single list.
+
+```
+merged_list: List[Any] = merge_list_of_lists(
+    list_of_lists: List[List[Any]],
+)
+```
+
+### Input
+
+- **list_of_lists** (*list*):
+The input list of lists.
+
+### Output
+
+- **merged_list** (*list*):
+The merged list.
+
+
+---
+
+
+## merge_lists_in_dict
+
+Merges all the lists in a dictionary into a single list.
+
+```
+merged_list: List[Any] = merge_lists_in_dict(
+    dictionary: Dict[Any, List[Any]],
+)
+```
+
+### Input
+
+- **dictionary** (*dict*):
+The input dictionary.
+
+### Output
+
+- **merged_list** (*list*):
+The merged list.
+The order of the merged list is determined by the order of the input dictionary keys.

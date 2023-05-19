@@ -1,0 +1,11 @@
+# DeiT
+automatic download (pretrained=True)
+
+# MLP-Mixer
+https://console.cloud.google.com/storage/mixer_models/
+
+# PoolFormer
+https://github.com/sail-sg/poolformer
+
+# PVT
+https://github.com/whai362/PVT/tree/v2/classification

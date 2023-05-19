@@ -3,7 +3,7 @@
 Base structure for loading datasets used in image classification tasks.
 
 
-- [Parameters](#parameters)
+- [Properties](#properties)
 - [Attributes](#attributes)
 - Methods
   - [getitem](#getitem)
@@ -25,9 +25,9 @@ ImageClassificationDataset(
 )
 ```
 
-## Parameters
+## Properties
 
-- **name** (*string*):
+- **name** (*str*):
 Name of the dataset.
 
 - **transform** (*callable, optional*):

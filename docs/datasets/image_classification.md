@@ -77,7 +77,7 @@ dataset = Caltech101(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **transform** (*callable, optional*):
@@ -112,7 +112,7 @@ dataset = Caltech256(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **transform** (*callable, optional*):
@@ -148,7 +148,7 @@ dataset = CIFAR10(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **train** (*bool, optional*):
@@ -187,7 +187,7 @@ dataset = CIFAR100(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **train** (*bool, optional*):
@@ -226,10 +226,10 @@ dataset = Country211(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
-- **split** (*string, optional*):
+- **split** (*str, optional*):
 The dataset split; supports *"train"* (default), *"valid"*, and *"test"*.
 
 - **transform** (*callable, optional*):
@@ -265,7 +265,7 @@ dataset = FashionMNIST(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **train** (*bool, optional*):
@@ -306,10 +306,10 @@ dataset = ImageNet(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory of the ILSVRC2012 dataset.
 
-- **split** (*string, optional*):
+- **split** (*str, optional*):
 The dataset split; supports *"train"* (default), and *"val"*.
 
 - **transform** (*callable, optional*):
@@ -341,7 +341,7 @@ dataset = MNIST(
 
 ### Parameters
 
-- **root** (*string*):
+- **root** (*str*):
 Root directory where the dataset exists or will be saved to if ***download*** is set to *True*.
 
 - **train** (*bool, optional*):

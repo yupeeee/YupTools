@@ -1,4 +1,4 @@
-from typing import Any, List, Tuple, Union
+from typing import Any, Dict, List, Tuple, Union
 
 import re
 
@@ -6,6 +6,8 @@ __all__ = [
     "argmax_list",
     "argmin_list",
     "sort_str_list",
+    "merge_list_of_lists",
+    "merge_lists_in_dict",
 ]
 
 
@@ -45,3 +47,24 @@ def sort_str_list(
         )
 
         return sorted_str_list, indices
+
+
+def merge_list_of_lists(
+        list_of_lists: List[List[Any]],
+) -> List[Any]:
+    return [item for sublist in list_of_lists for item in sublist]
+
+
+def merge_lists_in_dict(
+        dictionary: Dict[Any, List[Any]],
+) -> List[Any]:
+    lst = []
+
+    for key in dictionary:
+        value: List = dictionary[key]
+
+        lst.append(value)
+
+    lst = merge_list_of_lists(lst)
+
+    return lst

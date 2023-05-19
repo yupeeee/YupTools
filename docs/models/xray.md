@@ -72,7 +72,7 @@ feature_extractor: torch.nn.Module = FeatureExtractor(
 )
 ```
 
-### Parameters
+### Properties
 
 - **model** (*torch.nn.Module*):
 The PyTorch model.
