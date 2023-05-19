@@ -19,7 +19,7 @@ from yuptools.models import ImageNetClassificationModel
 model = ImageNetClassificationModel(
     name: str,
     pretrained: bool = False,
-    specify_weights: str = None,
+    weights: str = None,
     weights_dir: str = None,
     mode: str = None,
     use_cuda: bool = False,

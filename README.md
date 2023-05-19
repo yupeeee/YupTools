@@ -12,7 +12,8 @@
         - classification
             - [base](./docs/models/classification/base.md)
             - [models](./docs/models/classification/models.md)
-
+        - replace
+            - [Replacer](./docs/models/replace/Replacer.md)
         - [xray](./docs/models/xray.md)
 
     - plotlib
