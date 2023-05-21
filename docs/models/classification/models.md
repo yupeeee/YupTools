@@ -96,7 +96,7 @@ from yuptools.models import ImageNetClassificationModel
 model = ImageNetClassificationModel(
     name: str,
     pretrained: bool = False,
-    weights: str = None,
+    weights: str = default_weights,
     weights_dir: str = None,
     mode: str = None,
     use_cuda: bool = False,
