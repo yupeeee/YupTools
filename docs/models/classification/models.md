@@ -96,8 +96,8 @@ from yuptools.models import ImageNetClassificationModel
 model = ImageNetClassificationModel(
     name: str,
     pretrained: bool = False,
-    weights: str = default_weights,
-    weights_dir: str = None,
+    weights: Optional[str] = default_weights,
+    weights_dir: Optional[str] = None,
     mode: str = None,
     use_cuda: bool = False,
 )
@@ -112,12 +112,12 @@ Name of the model.
 Specifies whether to load pretrained weights for the model.
 Default is *False*.
 
-- **weights** (*str*):
+- **weights** (*str, optional*):
 Specifies which pretrained weights to use for models supported by PyTorch.
 See ***Table of all available classification weights*** in [**link**](https://pytorch.org/vision/stable/models.html) for more details, and possible values.
 Default is *"IMAGENET1K_V1"*.
 
-- **weights_dir** (*str*):
+- **weights_dir** (*str, optional*):
 Directory to search for the pretrained weights of models unsupported by PyTorch.
 **Must be initialized if loading a model unsupported by PyTorch**.
 
