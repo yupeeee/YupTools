@@ -3,6 +3,7 @@ from . import datasets
 from . import models
 from . import plotlib
 from . import tools
+from . import web
 
 __all__ = [
     "attacks",
@@ -10,4 +11,5 @@ __all__ = [
     "models",
     "plotlib",
     "tools",
+    "web",
 ]

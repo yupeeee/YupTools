@@ -15,7 +15,7 @@
         - [base](./docs/models/classification/base.md)
         - [models](./docs/models/classification/models.md)
     - replace
-        - [Replacer](./docs/models/replace/Replacer.md)
+        - [Replacer](docs/models/replace/base/Replacer.md)
     - [xray](./docs/models/xray.md)
 
 - plotlib
@@ -26,3 +26,6 @@
     - [listools](./docs/tools/listools.md)
     - [pathtools](./docs/tools/pathtools.md)
     - [randtools](./docs/tools/randtools.md)
+
+- web
+    - [ChromeDriver](./docs/web/chrome/driver/ChromeDriver.md)
