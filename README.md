@@ -3,6 +3,10 @@
 ## Structure
 
 - yuptools
+    
+    - attacks
+        - [FGSM](./docs/attacks/FGSM.md)
+        - [IFGSM](./docs/attacks/IFGSM.md)
 
     - datasets
         - [base](./docs/datasets/base.md)

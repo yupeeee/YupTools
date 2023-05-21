@@ -290,13 +290,16 @@ class ImageNet(ImageClassificationDataset):
             target_transform=target_transform,
         )
 
-        _ = Dataset(
-            root=root,
-            split=split,
-            transform=None,
-            target_transform=None,
-            loader=None,
-        )
+        try:
+            _ = Dataset(
+                root=root,
+                split=split,
+                transform=None,
+                target_transform=None,
+                loader=None,
+            )
+        except RuntimeError:
+            pass
 
         path_and_target = self.make_dataset(
             directory=os.path.join(

@@ -19,6 +19,12 @@ class Replacer:
         self.use_cuda = use_cuda
         self.machine = "cuda" if use_cuda else "cpu"
 
+        Replacer.__name__ = \
+            f"Replacer(" \
+            f"target={target}," \
+            f"to={to}" \
+            f")"
+
     def __call__(
             self,
             model: torch.nn.Module,

@@ -77,7 +77,7 @@ sorted_str_list: List[str], indices: List[int] = sort_str_list(
 
 ### Input
 
-- **str_lst** (*list*):
+- **str_list** (*list*):
 The list of strings to be sorted.
 
 - **return_indices** (*bool, optional*):
