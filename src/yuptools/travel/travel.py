@@ -43,6 +43,7 @@ class Traveler:
         self.direction_generator = DirectionGenerator(
             model=model,
             method=method,
+            perp=perp,
             normalize=normalize,
             seed=seed,
             use_cuda=use_cuda,

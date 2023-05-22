@@ -111,19 +111,19 @@ Default is *0.1* (10%).
 ### *call*
 
 Generates traveled data points and their corresponding epsilon values
-based on the specified method and input data (and targets).
-Note: Negative epsilon values (default: *-1.*) indicate either
+based on the specified method and input data (and targets). \
+**Note**: Negative epsilon values (default: *-1.*) indicate either
 the original misclassification of the corresponding data
 or the failure of the travel process to converge.
 
 - **data** (*torch.Tensor*):
 Input data to be traveled.
+It should be a tensor of shape (*batch_size*, ...),
+where ... represents the shape of each data sample.
 
-- **targets** (*torch.Tensor, optional*):
+- **targets** (*torch.Tensor*):
 Target of the input data.
-Must be initialized for specific direction generation methods
-(e.g., *"fgsm"*, *"fgsm-targeted"*).
-Default is *None*.
+It should be a 1-dimensional tensor of shape (*batch_size*, ).
 
 ```
 from torchvision import transforms as tf

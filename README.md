@@ -30,6 +30,7 @@
 
 - travel
     - [DirectionGenerator](./docs/travel/DirectionGenerator.md)
+    - [Footprint](./docs/travel/Footprint.md)
     - [Traveler](./docs/travel/Traveler.md)
 
 - web
