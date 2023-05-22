@@ -66,41 +66,41 @@ Determines if the traveled data points should be bound within a specific range,
 i.e., [0, 1] for image data.
 Default is *False*.
 
-- **seed** (*int*, optional):
+- **seed** (*int*):
 Random seed for direction generation.
 Default is *None*.
 
-- **use_cuda** (*bool*, optional):
+- **use_cuda** (*bool*):
 Determines if CUDA should be used for direction generation.
 Default is *False*.
 
-- **verbose** (*bool*, optional):
+- **verbose** (*bool*):
 Determines if progress information should be displayed.
 Default is *False*.
 
-- **init_eps** (*float*, optional):
+- **init_eps** (*float*):
 Initial epsilon value for travel.
 Default is *1e-3*.
 
-- **stride** (*float*, optional):
+- **stride** (*float*):
 The stride value for travel.
 **Must be over 0**.
 Default is *1e-3*.
 
-- **stride_decay** (*float*, optional):
+- **stride_decay** (*float*):
 The decay rate of the stride value after each travel iteration.
 **Must have a value in range (0, 1)**.
 Default is *0.5*.
 
-- **tol** (*float*, optional):
+- **tol** (*float*):
 The tolerance value for considering convergence.
 Default is *1e-10*.
 
-- **max_iter** (*int*, optional):
+- **max_iter** (*int*):
 The maximum number of iterations for traveling.
 Default is *10000*.
 
-- **turnaround** (*float*, optional):
+- **turnaround** (*float*):
 The percentage of maximum iterations to wait before considering divergence.
 Default is *0.1* (10%).
 

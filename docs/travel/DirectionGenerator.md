@@ -55,11 +55,11 @@ Default is *"dim"*.
     - **"unit"**: normalizes the direction $\mathrm{\mathbf{d}}$ as 
         $\|\mathrm{\mathbf{d}}\|_{2} = 1$.
 
-- **seed** (*int*, optional):
+- **seed** (*int*):
 Random seed for direction generation.
 Default is *None*.
 
-- **use_cuda** (*bool*, optional):
+- **use_cuda** (*bool*):
 Determines if CUDA should be used for direction generation.
 Default is *False*.
 
