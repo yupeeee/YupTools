@@ -23,6 +23,7 @@
 
 - tools
     - [attrtools](./docs/tools/attrtools.md)
+    - [linalgtools](./docs/tools/linalgtools.md)
     - [listools](./docs/tools/listools.md)
     - [pathtools](./docs/tools/pathtools.md)
     - [randtools](./docs/tools/randtools.md)
