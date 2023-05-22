@@ -1,7 +1,6 @@
 # yuptools.travel.footprint.Footprint
 
-Performs decision boundary travel in the input space
-by iteratively adjusting the input data along the specified direction.
+Generates footprints for the given data and epsilons (and targets).
 For further understanding of the idea of *travel* and *direction*,
 refer to [**link**](https://arxiv.org/abs/2210.05742).
 
