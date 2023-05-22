@@ -118,6 +118,10 @@ class ImageClassificationDataset:
             data, target = self[i]
 
             data_c.append(data.unsqueeze(dim=0))
+
+            if isinstance(target, int):
+                target = torch.Tensor([target, ]).to(torch.int64)[0]
+
             targets_c.append(target.unsqueeze(dim=0))
 
         data_c = torch.cat(data_c, dim=0)

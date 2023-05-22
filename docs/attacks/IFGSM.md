@@ -74,6 +74,8 @@ By default, it is set to *False*.
 Performs the I-FGSM attack on the input data.
 
 ```
+from torchvision import transforms as tf
+
 from yuptools.attacks import IFGSM
 from yuptools.datasets import ImageNet, image_classification_transforms
 from yuptools.models import ImageNetClassificationModel, default_weights

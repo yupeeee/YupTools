@@ -25,10 +25,10 @@ class FGSM:
 
         FGSM.__name__ = \
             f"FGSM(" \
-            f"epsilon={epsilon}, " \
-            f"targeted={targeted}, " \
-            f"bound={bound}, " \
-            f"seed={seed}" \
+            f"epsilon={self.epsilon}, " \
+            f"targeted={self.targeted}, " \
+            f"bound={self.bound}, " \
+            f"seed={self.seed}" \
             f")"
 
     def __call__(
@@ -51,7 +51,7 @@ class FGSM:
             data: torch.Tensor,
             targets: torch.Tensor,
     ) -> torch.Tensor:
-        from ..tools.randtools import set_random_seed
+        from ..tools.randtools import set_random_seed, unset_random_seed
 
         set_random_seed(self.seed)
 
@@ -72,5 +72,7 @@ class FGSM:
 
         if self.targeted:
             grad = -grad
+
+        unset_random_seed()
 
         return grad

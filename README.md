@@ -27,5 +27,9 @@
     - [pathtools](./docs/tools/pathtools.md)
     - [randtools](./docs/tools/randtools.md)
 
+- travel
+    - [DirectionGenerator](./docs/travel/DirectionGenerator.md)
+    - [Traveler](./docs/travel/Traveler.md)
+
 - web
     - [ChromeDriver](./docs/web/chrome/driver/ChromeDriver.md)

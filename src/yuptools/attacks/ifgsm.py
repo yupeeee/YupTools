@@ -34,12 +34,12 @@ class IFGSM:
 
         IFGSM.__name__ = \
             f"IFGSM(" \
-            f"alpha={alpha}, " \
-            f"iteration={iteration}, " \
-            f"epsilon={epsilon}, " \
-            f"targeted={targeted}, " \
-            f"bound={bound}, " \
-            f"seed={seed}" \
+            f"alpha={self.alpha}, " \
+            f"iteration={self.iteration}, " \
+            f"epsilon={self.epsilon}, " \
+            f"targeted={self.targeted}, " \
+            f"bound={self.bound}, " \
+            f"seed={self.seed}" \
             f")"
 
     def __call__(
