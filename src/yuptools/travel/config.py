@@ -14,6 +14,8 @@ __all__ = [
 direction_generation_methods = [
     "fgsm",
     "fgsm_targeted",
+    "random",
+    "random_signed",
 ]
 
 direction_normalize_methods = [

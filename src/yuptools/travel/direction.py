@@ -10,6 +10,35 @@ __all__ = [
 ]
 
 
+def random_direction(
+        data: torch.Tensor,
+        signed: bool = False,
+        seed: int = None,
+) -> torch.Tensor:
+    from ..tools.linalgtools import repeat_tensor
+    from ..tools.randtools import set_random_seed, unset_random_seed
+
+    num_data = len(data)
+
+    set_random_seed(seed)
+
+    direction = torch.randn_like(data[0])
+
+    if signed:
+        direction = direction > 0
+        direction = (direction.int() - 0.5).sign()
+
+    direction = repeat_tensor(
+        tensor=direction,
+        repeat=num_data,
+        dim=0,
+    )
+
+    unset_random_seed()
+
+    return direction
+
+
 def post_process(
         direction: torch.Tensor,
         perp: bool = False,
@@ -115,6 +144,20 @@ class DirectionGenerator:
             ).gradient(
                 data=data,
                 targets=targets,
+            )
+
+        elif self.method == "random":
+            direction = random_direction(
+                data=data,
+                signed=False,
+                seed=self.seed,
+            )
+
+        elif self.method == "random_signed":
+            direction = random_direction(
+                data=data,
+                signed=True,
+                seed=self.seed,
             )
 
         else:

@@ -37,8 +37,11 @@ Method for generating directions.
 Available methods are listed below.
 Default is *"fgsm"*.
 
-    - **"fgsm"**: generates direction using [FGSM](../attacks/FGSM.md).
-    - **"fgsm_targeted"**: generates direction using [FGSM (targeted=True)](../attacks/FGSM.md).
+    - **"fgsm"**: Generates direction using [FGSM](../attacks/FGSM.md).
+    - **"fgsm_targeted"**: Generates direction using [FGSM (targeted=True)](../attacks/FGSM.md).
+    - **"random"**: Generates an identical random direction for all input data.
+    - **"random_signed"**: Generates an identical random direction for all input data,
+        where each element can only be -1 or 1.
 
 - **perp** (*bool*):
 Determines if the generated directions should be perpendicular to the original direction.
@@ -49,10 +52,10 @@ Specifies the method to normalize directions.
 Available methods are listed below.
 Default is *"dim"*.
 
-    - **"dim"**: normalizes the direction $\mathrm{\mathbf{d}}$ as 
+    - **"dim"**: Normalizes the direction $\mathrm{\mathbf{d}}$ as 
         $\|\mathrm{\mathbf{d}}\|_{2} = \sqrt{D}$,
         where $D$ is the dimension of $\mathrm{\mathbf{d}}$.
-    - **"unit"**: normalizes the direction $\mathrm{\mathbf{d}}$ as 
+    - **"unit"**: Normalizes the direction $\mathrm{\mathbf{d}}$ as 
         $\|\mathrm{\mathbf{d}}\|_{2} = 1$.
 
 - **seed** (*int*):
