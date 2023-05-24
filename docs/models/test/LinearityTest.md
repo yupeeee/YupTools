@@ -5,9 +5,13 @@ Measures the linearity of a model's responses
 to linear movements in the input space.
 
 Let
+
 $\mathrm{\mathbf{x}}_{\epsilon} = \mathrm{\mathbf{x}} + \epsilon \times \mathrm{\mathbf{d}}$,
+
 where
+
 $\mathrm{\mathbf{x}} \in \mathbb{R}^{D_{\mathrm{in}}}$
+
 is the input data,
 $\mathrm{\mathbf{d}} \in \mathbb{R}^{D_{\mathrm{in}}}$
 is the direction of movement in the input space,
