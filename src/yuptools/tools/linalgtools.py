@@ -7,6 +7,7 @@ __all__ = [
     "normalize_v",
     "proj_v1_to_v2",
     "orthogonal_to_v",
+    "angle_of_three_points",
 ]
 
 
@@ -55,3 +56,22 @@ def orthogonal_to_v(
     unset_random_seed()
 
     return rand_v - proj_v
+
+
+def angle_of_three_points(
+        i: torch.Tensor,
+        f1: torch.Tensor,
+        f2: torch.Tensor,
+        eps: float = 1e-7,
+) -> float:
+    assert len(i.shape) * len(f1.shape) * len(f2.shape) == 1
+
+    v1 = f1 - i
+    v2 = f2 - i
+
+    v1 = v1 / (torch.norm(v1, p="fro") + eps)
+    v2 = v2 / (torch.norm(v2, p="fro") + eps)
+
+    angle = torch.acos(torch.dot(v1, v2).clamp(-1, 1))
+
+    return float(angle)

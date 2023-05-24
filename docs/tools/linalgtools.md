@@ -7,6 +7,7 @@ Utility functions for performing linear algebra operations on vectors and tensor
 - [normalize_v](#normalize_v)
 - [proj_v1_to_v2](#proj_v1_to_v2)
 - [orthogonal_to_v](#orthogonal_to_v)
+- [angle_of_three_points](#angle_of_three_points)
 
 
 ---
@@ -127,3 +128,40 @@ Default is *None*.
 
 - **orthogonal_v** (*torch.Tensor*):
 The orthogonal vector.
+
+
+---
+
+
+## angle_of_three_points
+
+Calculates the angle between three points.
+
+```
+angle: float = angle_of_three_points(
+    i: torch.Tensor,
+    f1: torch.Tensor,
+    f2: torch.Tensor,
+    eps: float = 1e-7,
+)
+```
+
+### Input
+
+- **i** (*torch.Tensor*):
+The initial point.
+
+- **f1** (*torch.Tensor*):
+The first final point.
+
+- **f2** (*torch.Tensor*):
+The second final point.
+
+- **eps** (*float, optional*):
+A small value added to the denominator to avoid division by zero.
+Default is *1e-7*.
+
+### Output
+
+- **angle** (*float*):
+The angle between the three points in radians.

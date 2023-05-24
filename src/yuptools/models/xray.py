@@ -61,19 +61,26 @@ class FeatureExtractor(torch.nn.Module):
     def __init__(
             self,
             model: torch.nn.Module,
+            use_cuda: bool = False,
     ):
         super().__init__()
 
         self.model = model
+        self.use_cuda = use_cuda
+        self.machine = "cuda" if use_cuda else "cpu"
 
         layer_ids = get_layer_ids(model)
         self.features = dict()
+
+        self.hooks = []
 
         for layer_id in layer_ids:
             layer = get_layer(model, layer_id)
             layer_kind = layer.__class__.__name__
 
-            layer.register_forward_hook(self.save_outputs_hook(layer_id, layer_kind))
+            self.hooks.append(
+                layer.register_forward_hook(self.save_outputs_hook(layer_id, layer_kind))
+            )
 
     def save_outputs_hook(
             self,
@@ -95,6 +102,9 @@ class FeatureExtractor(torch.nn.Module):
             self,
             x: torch.Tensor,
     ) -> Dict[str, torch.Tensor]:
-        _ = self.model(x)
+        _ = self.model(x.to(self.machine))
+
+        for hook in self.hooks:
+            hook.remove()
 
         return self.features

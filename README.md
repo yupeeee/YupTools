@@ -16,6 +16,8 @@
         - [models](./docs/models/classification/models.md)
     - replace
         - [Replacer](docs/models/replace/base/Replacer.md)
+    - test
+        - [LinearityTest](docs/models/test/LinearityTest.md)
     - [xray](./docs/models/xray.md)
 
 - plotlib

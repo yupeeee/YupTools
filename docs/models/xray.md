@@ -69,6 +69,7 @@ A PyTorch module that facilitates feature extraction from a model.
 ```
 feature_extractor: torch.nn.Module = FeatureExtractor(
     model: torch.nn.Module,
+    use_cuda: bool = False,
 )
 ```
 
@@ -77,6 +78,10 @@ feature_extractor: torch.nn.Module = FeatureExtractor(
 - **model** (*torch.nn.Module*):
 The PyTorch model.
 
+- **use_cuda** (*bool*):
+Determines if CUDA should be used for feature extraction.
+Default is *False*.
+
 ### *forward*
 
 Performs a forward pass through the model and returns the extracted features.
@@ -84,6 +89,7 @@ Performs a forward pass through the model and returns the extracted features.
 ```
 features: Dict[str, torch.Tensor] = FeatureExtractor(
     model: torch.nn.Module,
+    use_cuda: bool = False,
 )(x: torch.Tensor,)
 ```
 
