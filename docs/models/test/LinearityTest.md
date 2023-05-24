@@ -5,9 +5,7 @@ Measures the linearity of a model's responses
 to linear movements in the input space.
 
 Let
-
-$\mathrm{\mathbf{x}}_{\epsilon} = \mathrm{\mathbf{x}} + \epsilon \times \mathrm{\mathbf{d}},$
-
+$\mathrm{\mathbf{x}}_{\epsilon} = \mathrm{\mathbf{x}} + \epsilon \times \mathrm{\mathbf{d}}$,
 where
 $\mathrm{\mathbf{x}} \in \mathbb{R}^{D_{\mathrm{in}}}$
 is the input data,
@@ -20,22 +18,12 @@ $f:\mathrm{\mathbf{x}} \rightarrow \mathrm{\mathbf{y}}$
 ($\mathrm{\mathbf{y}} \in \mathbb{R}^{D_{\mathrm{out}}}$
 is the output feature of input $\mathrm{\mathbf{x}}$)
 is computed through
-
-$\theta_{\epsilon} = \pi - \mathrm{arccos}(
-\hat{\mathrm{\mathbf{y}}}_{\epsilon^{-}} \cdot
-\hat{\mathrm{\mathbf{y}}}_{\epsilon^{+}}
-),$
-
+$\theta_{\epsilon} = \pi - \mathrm{arccos}(\hat{\mathrm{\mathbf{y}}}_{\epsilon^{-}} \cdot \hat{\mathrm{\mathbf{y}}}_{\epsilon^{+}})$,
 where
-$\mathrm{\mathbf{y}}_{\epsilon^{-}} =
-f(\mathrm{\mathbf{x}}_{\epsilon - \Delta\epsilon}) -
-f(\mathrm{\mathbf{x}}_{\epsilon})$,
-$\mathrm{\mathbf{y}}_{\epsilon^{+}} =
-f(\mathrm{\mathbf{x}}_{\epsilon + \Delta\epsilon}) -
-f(\mathrm{\mathbf{x}}_{\epsilon})$,
+$\mathrm{\mathbf{y}}_{\epsilon^{-}} = f(\mathrm{\mathbf{x}}_{\epsilon - \Delta\epsilon}) - f(\mathrm{\mathbf{x}}_{\epsilon})$,
+$\mathrm{\mathbf{y}}_{\epsilon^{+}} = f(\mathrm{\mathbf{x}}_{\epsilon + \Delta\epsilon}) - f(\mathrm{\mathbf{x}}_{\epsilon})$,
 and
-$\hat{\mathrm{\mathbf{y}}} =
-\mathrm{\mathbf{y}}/||\mathrm{\mathbf{y}}||_{\mathrm{2}}$.
+$\hat{\mathrm{\mathbf{y}}} = \mathrm{\mathbf{y}}/||\mathrm{\mathbf{y}}||_{\mathrm{2}}$.
 
 - [Properties](#properties)
 - Methods
