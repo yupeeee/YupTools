@@ -7,10 +7,10 @@ YupTools is a Python package based on PyTorch.
 
 ## Installation
 
-Latest version: 0.1.0 <br>
+Latest version: 0.1.1 <br>
 **Note: [Manual installation of PyTorch](https://pytorch.org/get-started/locally/) is required.**
 ```
-pip install yuptools==0.1.0
+pip install yuptools==0.1.1
 ```
 
 
@@ -58,6 +58,8 @@ import yuptools
     - replace
         - [Replacer](docs/models/replace/base/Replacer.md)
     - test
+        - [AccuracyTest](docs/models/test/AccuracyTest.md)
+        - [CalibrationTest](docs/models/test/CalibrationTest.md)
         - [LinearityTest](docs/models/test/LinearityTest.md)
     - [xray (FeatureExtractor)](./docs/models/xray.md)
 
