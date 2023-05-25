@@ -1,5 +1,46 @@
 # YupTools
 
+YupTools is a Python package based on PyTorch.
+
+---
+
+
+## Installation
+
+Latest version: 0.1.0 <br>
+**Note: [Manual installation of PyTorch](https://pytorch.org/get-started/locally/) is required.**
+```
+pip install yuptools==0.1.0
+```
+
+
+### Requirements
+
+```
+Python >= 3.8
+
+matplotlib
+numpy
+pandas
+Pillow
+pyyaml
+pyperclip
+selenium
+timm
+# torch
+# torchvision
+tqdm
+webdriver_manager
+```
+
+
+## Usage
+
+```
+import yuptools
+```
+
+
 ## Structure
 
 - attacks
@@ -18,17 +59,21 @@
         - [Replacer](docs/models/replace/base/Replacer.md)
     - test
         - [LinearityTest](docs/models/test/LinearityTest.md)
-    - [xray](./docs/models/xray.md)
+    - [xray (FeatureExtractor)](./docs/models/xray.md)
 
 - plotlib
     - [common](./docs/plotlib/common.md)
 
 - tools
     - [attrtools](./docs/tools/attrtools.md)
+    - [dictools](./docs/tools/dictools.md)
     - [linalgtools](./docs/tools/linalgtools.md)
     - [listools](./docs/tools/listools.md)
     - [pathtools](./docs/tools/pathtools.md)
     - [randtools](./docs/tools/randtools.md)
+
+- train
+    - [SupervisedLearner](./docs/train/SupervisedLearner.md)
 
 - travel
     - [DirectionGenerator](./docs/travel/DirectionGenerator.md)

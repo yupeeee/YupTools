@@ -8,6 +8,7 @@ Base structure for loading datasets used in image classification tasks.
 - Methods
   - [getitem](#getitem)
   - [len](#len)
+  - [str](#str)
   - [make_dataset](#make_dataset)
   - [initialize](#initialize)
   - [data_and_targets_of_class_c](#data_and_targets_of_class_c)
@@ -72,6 +73,16 @@ Returns the number of samples in the dataset.
 ```
 dataset = ImageClassificationDataset()
 length_of_dataset: int = len(dataset)
+```
+
+
+### *str*
+
+Returns the name of the dataset.
+
+```
+dataset = ImageClassificationDataset()
+name_of_dataset: str = str(dataset)
 ```
 
 

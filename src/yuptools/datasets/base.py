@@ -57,6 +57,11 @@ class ImageClassificationDataset:
     ) -> int:
         return len(self.data)
 
+    def __str__(
+            self,
+    ) -> str:
+        return self.name
+
     @staticmethod
     def make_dataset(
             directory: str,
