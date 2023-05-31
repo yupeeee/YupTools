@@ -7,10 +7,10 @@ YupTools is a Python package based on PyTorch.
 
 ## Installation
 
-Latest version: 0.1.1 <br>
+Latest version: 0.1.2 <br>
 **Note: [Manual installation of PyTorch](https://pytorch.org/get-started/locally/) is required.**
 ```
-pip install yuptools==0.1.1
+pip install yuptools==0.1.2
 ```
 
 
@@ -64,6 +64,7 @@ import yuptools
     - [xray (FeatureExtractor)](./docs/models/xray.md)
 
 - plotlib
+    - [BarPlot](./docs/plotlib/BarPlot.md)
     - [common](./docs/plotlib/common.md)
 
 - tools

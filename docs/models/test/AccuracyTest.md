@@ -52,7 +52,6 @@ from yuptools.datasets import ImageNet, image_classification_transforms
 from yuptools.models import ImageNetClassificationModel, default_weights, \
     AccuracyTest
 
-
 IMAGENET_DIR = ...
 k = 1
 

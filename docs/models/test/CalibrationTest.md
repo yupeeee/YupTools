@@ -62,7 +62,6 @@ from yuptools.datasets import ImageNet, image_classification_transforms
 from yuptools.models import ImageNetClassificationModel, default_weights, \
     CalibrationTest
 
-
 IMAGENET_DIR = ...
 num_bins = 10
 

@@ -52,7 +52,7 @@ Default is *False*.
 ## Methods
 
 
-### *run*
+### run
 
 Runs the training and evaluation process.
 
@@ -77,7 +77,7 @@ trainer.run(
 ```
 
 
-### *resume*
+### resume
 
 Resumes a previous training process from a checkpoint.
 

@@ -82,7 +82,6 @@ from yuptools.models import ImageNetClassificationModel, default_weights, \
     FeatureExtractor, LinearityTest
 from yuptools.travel import DirectionGenerator
 
-
 plt.rcParams.update({"font.size": 15})
 IMAGENET_DIR = ...
 
