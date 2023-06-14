@@ -4,6 +4,7 @@ pandas
 Pillow
 pyyaml
 pyperclip
+scipy
 selenium
 timm
 # --extra-index-url https://download.pytorch.org/whl/cu113

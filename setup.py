@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="yuptools",
-    version="0.1.2",
+    version="0.1.3",
     description="",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -23,6 +23,7 @@ setup(
         "Pillow",
         "pyyaml",
         "pyperclip",
+        "scipy",
         "selenium",
         "timm",
         "tqdm",

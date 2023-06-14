@@ -7,10 +7,10 @@ YupTools is a Python package based on PyTorch.
 
 ## Installation
 
-Latest version: 0.1.2 <br>
+Latest version: 0.1.3 <br>
 **Note: [Manual installation of PyTorch](https://pytorch.org/get-started/locally/) is required.**
 ```
-pip install yuptools==0.1.2
+pip install yuptools==0.1.3
 ```
 
 
@@ -25,6 +25,7 @@ pandas
 Pillow
 pyyaml
 pyperclip
+scipy
 selenium
 timm
 # torch
@@ -44,44 +45,44 @@ import yuptools
 ## Structure
 
 - attacks
-    - [FGSM](./docs/attacks/FGSM.md)
-    - [IFGSM](./docs/attacks/IFGSM.md)
+    - [FGSM](https://github.com/yupeeee/YupTools/blob/main/docs/attacks/FGSM.md)
+    - [IFGSM](https://github.com/yupeeee/YupTools/blob/main/docs/attacks/IFGSM.md)
 
 - datasets
-    - [base](./docs/datasets/base.md)
-    - [image_classification](./docs/datasets/image_classification.md)
+    - [base](https://github.com/yupeeee/YupTools/blob/main/docs/datasets/base.md)
+    - [image_classification](https://github.com/yupeeee/YupTools/blob/main/docs/datasets/image_classification.md)
 
 - models
     - classification
-        - [base](./docs/models/classification/base.md)
-        - [models](./docs/models/classification/models.md)
+        - [base](https://github.com/yupeeee/YupTools/blob/main/docs/models/classification/base.md)
+        - [models](https://github.com/yupeeee/YupTools/blob/main/docs/models/classification/models.md)
     - replace
-        - [Replacer](docs/models/replace/base/Replacer.md)
+        - [Replacer](https://github.com/yupeeee/YupTools/blob/main/docs/models/replace/base/Replacer.md)
     - test
-        - [AccuracyTest](docs/models/test/AccuracyTest.md)
-        - [CalibrationTest](docs/models/test/CalibrationTest.md)
-        - [LinearityTest](docs/models/test/LinearityTest.md)
-    - [xray (FeatureExtractor)](./docs/models/xray.md)
+        - [AccuracyTest](https://github.com/yupeeee/YupTools/blob/main/docs/models/test/AccuracyTest.md)
+        - [CalibrationTest](https://github.com/yupeeee/YupTools/blob/main/docs/models/test/CalibrationTest.md)
+        - [LinearityTest](https://github.com/yupeeee/YupTools/blob/main/docs/models/test/LinearityTest.md)
+    - [xray (FeatureExtractor)](https://github.com/yupeeee/YupTools/blob/main/docs/models/xray.md)
 
 - plotlib
-    - [BarPlot](./docs/plotlib/BarPlot.md)
-    - [common](./docs/plotlib/common.md)
+    - [BarPlot](https://github.com/yupeeee/YupTools/blob/main/docs/plotlib/BarPlot.md)
+    - [common](https://github.com/yupeeee/YupTools/blob/main/docs/plotlib/common.md)
 
 - tools
-    - [attrtools](./docs/tools/attrtools.md)
-    - [dictools](./docs/tools/dictools.md)
-    - [linalgtools](./docs/tools/linalgtools.md)
-    - [listools](./docs/tools/listools.md)
-    - [pathtools](./docs/tools/pathtools.md)
-    - [randtools](./docs/tools/randtools.md)
+    - [attrtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/attrtools.md)
+    - [dictools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/dictools.md)
+    - [linalgtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/linalgtools.md)
+    - [listools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/listools.md)
+    - [pathtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/pathtools.md)
+    - [randtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/randtools.md)
 
 - train
-    - [SupervisedLearner](./docs/train/SupervisedLearner.md)
+    - [SupervisedLearner](https://github.com/yupeeee/YupTools/blob/main/docs/train/SupervisedLearner.md)
 
 - travel
-    - [DirectionGenerator](./docs/travel/DirectionGenerator.md)
-    - [Footprint](./docs/travel/Footprint.md)
-    - [Traveler](./docs/travel/Traveler.md)
+    - [DirectionGenerator](https://github.com/yupeeee/YupTools/blob/main/docs/travel/DirectionGenerator.md)
+    - [Footprint](https://github.com/yupeeee/YupTools/blob/main/docs/travel/Footprint.md)
+    - [Traveler](https://github.com/yupeeee/YupTools/blob/main/docs/travel/Traveler.md)
 
 - web
-    - [ChromeDriver](./docs/web/chrome/driver/ChromeDriver.md)
+    - [ChromeDriver](https://github.com/yupeeee/YupTools/blob/main/docs/web/chrome/driver/ChromeDriver.md)
