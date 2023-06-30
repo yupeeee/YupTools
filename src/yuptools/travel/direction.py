@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 import torch
 
@@ -8,6 +8,13 @@ from .warnings import *
 __all__ = [
     "DirectionGenerator",
 ]
+
+
+def custom_direction(
+        data: torch.Tensor,
+        destinations: torch.Tensor,
+) -> torch.Tensor:
+    return destinations - data
 
 
 def random_direction(
@@ -42,8 +49,8 @@ def random_direction(
 def post_process(
         direction: torch.Tensor,
         perp: bool = False,
-        normalize: str = default_normalize,
-        seed: int = None,
+        normalize: Union[str, None] = default_normalize,
+        seed: Union[int, None] = None,
 ) -> torch.Tensor:
     from ..tools.linalgtools import normalize_v, orthogonal_to_v
 
@@ -83,8 +90,8 @@ class DirectionGenerator:
             model: Optional[torch.nn.Module] = None,
             method: str = default_method,
             perp: bool = False,
-            normalize: str = default_normalize,
-            seed: int = default_seed,
+            normalize: Union[str, None] = default_normalize,
+            seed: Union[int, None] = default_seed,
             use_cuda: bool = False,
     ) -> None:
         # assertions
@@ -109,10 +116,17 @@ class DirectionGenerator:
             self,
             data: torch.Tensor,
             targets: Optional[torch.Tensor] = None,
+            destinations: Optional[torch.Tensor] = None,
     ) -> torch.Tensor:
         assert data is not None
 
-        if self.method == "fgsm":
+        if self.method == "custom":
+            direction = custom_direction(
+                data=data,
+                destinations=destinations,
+            )
+
+        elif self.method == "fgsm":
             from ..attacks.fgsm import FGSM
 
             assert targets is not None and self.model is not None

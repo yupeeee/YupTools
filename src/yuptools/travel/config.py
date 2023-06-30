@@ -12,6 +12,7 @@ __all__ = [
 ]
 
 direction_generation_methods = [
+    "custom",
     "fgsm",
     "fgsm_targeted",
     "random",
@@ -19,6 +20,7 @@ direction_generation_methods = [
 ]
 
 direction_normalize_methods = [
+    None,
     "dim",
     "unit",
 ]

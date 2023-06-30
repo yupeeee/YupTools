@@ -37,6 +37,7 @@ Method for generating directions.
 Available methods are listed below.
 Default is *"fgsm"*.
 
+    - **"custom"**: Generates a custom direction for given input data and destinations.
     - **"fgsm"**: Generates direction using [FGSM](../attacks/FGSM.md).
     - **"fgsm_targeted"**: Generates direction using [FGSM (targeted=True)](../attacks/FGSM.md).
     - **"random"**: Generates an identical random direction for all input data.
@@ -85,6 +86,11 @@ It should be a 1-dimensional tensor of shape (*batch_size*, ).
 Must be initialized for specific direction generation methods
 (e.g., *"fgsm"*, *"fgsm-targeted"*).
 Default is *None*.
+
+- **destinations** (*torch.Tensor*):
+Destinations of the input data in the input space.
+It should be a tensor with the same shape as ***data***.
+It is only required as input when the selected method for generating directions is *"custom"*.
 
 ```
 directions: torch.Tensor = DirectionGenerator(...)(
