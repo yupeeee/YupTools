@@ -87,10 +87,11 @@ Must be initialized for specific direction generation methods
 (e.g., *"fgsm"*, *"fgsm-targeted"*).
 Default is *None*.
 
-- **destinations** (*torch.Tensor*):
+- **destinations** (*torch.Tensor, optional*):
 Destinations of the input data in the input space.
 It should be a tensor with the same shape as ***data***.
 It is only required as input when the selected method for generating directions is *"custom"*.
+Default is *None*.
 
 ```
 directions: torch.Tensor = DirectionGenerator(...)(
