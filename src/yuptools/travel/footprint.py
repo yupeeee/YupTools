@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional
 
 import torch
 
@@ -18,7 +18,7 @@ class Footprint:
             perp: bool = False,
             normalize: str = default_normalize,
             bound: bool = False,
-            seed: Union[int, None] = default_seed,
+            seed: Optional[int] = default_seed,
             use_cuda: bool = False,
     ) -> None:
         from .direction import DirectionGenerator

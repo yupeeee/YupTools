@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional
 
 import torch
 
@@ -20,7 +20,7 @@ def custom_direction(
 def random_direction(
         data: torch.Tensor,
         signed: bool = False,
-        seed: int = None,
+        seed: Optional[int] = None,
 ) -> torch.Tensor:
     from ..tools.linalgtools import repeat_tensor
     from ..tools.randtools import set_random_seed, unset_random_seed
@@ -49,8 +49,8 @@ def random_direction(
 def post_process(
         direction: torch.Tensor,
         perp: bool = False,
-        normalize: Union[str, None] = default_normalize,
-        seed: Union[int, None] = None,
+        normalize: Optional[str] = default_normalize,
+        seed: Optional[int] = None,
 ) -> torch.Tensor:
     from ..tools.linalgtools import normalize_v, orthogonal_to_v
 
@@ -90,8 +90,8 @@ class DirectionGenerator:
             model: Optional[torch.nn.Module] = None,
             method: str = default_method,
             perp: bool = False,
-            normalize: Union[str, None] = default_normalize,
-            seed: Union[int, None] = default_seed,
+            normalize: Optional[str] = default_normalize,
+            seed: Optional[int] = default_seed,
             use_cuda: bool = False,
     ) -> None:
         # assertions
