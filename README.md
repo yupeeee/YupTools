@@ -7,10 +7,10 @@ YupTools is a Python package based on PyTorch.
 
 ## Installation
 
-Latest version: 0.1.5 <br>
+Latest version: 0.1.6 <br>
 **Note: [Manual installation of PyTorch](https://pytorch.org/get-started/locally/) is required.**
 ```
-pip install yuptools==0.1.4
+pip install yuptools==0.1.6
 ```
 
 

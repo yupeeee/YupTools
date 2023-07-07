@@ -164,8 +164,20 @@ class ImageClassificationModel:
     def predict(
             self,
             x: Any,
+            batch_size: Optional[int] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        y = self.__call__(x)
+        if batch_size is not None:
+            batches = x.split(batch_size, dim=0)
+
+            y = []
+
+            for batch in batches:
+                y.append(self.__call__(batch))
+
+            y = torch.cat(y, dim=0)
+
+        else:
+            y = self.__call__(x)
 
         confs = torch.nn.Softmax(dim=-1)(y).to("cpu")
         preds = torch.argmax(confs, dim=-1)

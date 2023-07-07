@@ -129,6 +129,7 @@ model = ImageClassificationModel(...)
 
 preds, confs = model.predict(
     x: Any,
+    batch_size: Optional[int] = None,
 )
 ```
 

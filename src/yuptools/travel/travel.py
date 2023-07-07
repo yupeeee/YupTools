@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Union
 
 import torch
 import tqdm
@@ -18,7 +18,7 @@ class Traveler:
             perp: bool = False,
             normalize: str = default_normalize,
             bound: bool = False,
-            seed: int = default_seed,
+            seed: Union[int, None] = default_seed,
             use_cuda: bool = False,
             verbose: bool = False,
             init_eps: float = 1e-3,

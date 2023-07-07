@@ -162,3 +162,4 @@ cython_debug/
 not_in_pytorch_weights/
 temp.py
 temp2.py
+data/

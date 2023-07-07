@@ -19,7 +19,7 @@ DirectionGenerator(
     method: str = default_method,
     perp: bool = False,
     normalize: str = default_normalize,
-    seed: int = default_seed,
+    seed: Optional[int] = default_seed,
     use_cuda: bool = False,
 )
 ```
@@ -59,7 +59,7 @@ Default is *"dim"*.
     - **"unit"**: Normalizes the direction $\mathrm{\mathbf{d}}$ as 
         $\|\mathrm{\mathbf{d}}\|_{2} = 1$.
 
-- **seed** (*int*):
+- **seed** (*int, optional*):
 Random seed for direction generation.
 Default is *None*.
 
@@ -96,6 +96,7 @@ Default is *None*.
 ```
 directions: torch.Tensor = DirectionGenerator(...)(
     data: torch.Tensor,
-    targets: torch.Tensor,
+    targets: Optional[torch.Tensor] = None,
+    destinations: Optional[torch.Tensor] = None,
 )
 ```

@@ -1,3 +1,5 @@
+from typing import Optional, Union
+
 import torch
 
 from .config import *
@@ -16,7 +18,7 @@ class Footprint:
             perp: bool = False,
             normalize: str = default_normalize,
             bound: bool = False,
-            seed: int = default_seed,
+            seed: Union[int, None] = default_seed,
             use_cuda: bool = False,
     ) -> None:
         from .direction import DirectionGenerator
@@ -52,11 +54,13 @@ class Footprint:
             self,
             data: torch.Tensor,
             epsilons: torch.Tensor,
-            targets: torch.Tensor = None,
+            targets: Optional[torch.Tensor] = None,
+            destinations: Optional[torch.Tensor] = None,
     ) -> torch.Tensor:
         directions = self.direction_generator(
             data=data,
             targets=targets,
+            destinations=destinations,
         )
 
         footprints = []

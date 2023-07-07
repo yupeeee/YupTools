@@ -21,7 +21,7 @@ Traveler(
     perp: bool = False,
     normalize: str = default_normalize,
     bound: bool = False,
-    seed: int = default_seed,
+    seed: Optional[int] = default_seed,
     use_cuda: bool = False,
 )
 ```
@@ -65,7 +65,7 @@ Determines if the generated footprints should be bound within a specific range,
 i.e., [0, 1] for image data.
 Default is *False*.
 
-- **seed** (*int*):
+- **seed** (*int, optional*):
 Random seed for direction generation.
 Default is *None*.
 
@@ -99,10 +99,17 @@ Must be initialized for specific direction generation methods
 (e.g., *"fgsm"*, *"fgsm-targeted"*).
 Default is *None*.
 
+- **destinations** (*torch.Tensor, optional*):
+Destinations of the input data in the input space.
+It should be a tensor with the same shape as ***data***.
+It is only required as input when the selected method for generating directions is *"custom"*.
+Default is *None*.
+
 ```
 footprints: torch.Tensor = Footprint(...)(
     data: torch.Tensor,
     epsilons: torch.Tensor,
-    targets: torch.Tensor = None,
+    targets: Optional[torch.Tensor] = None,
+    destinations: Optional[torch.Tensor] = None,
 )
 ```
