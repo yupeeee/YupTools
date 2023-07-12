@@ -16,7 +16,7 @@ class Footprint:
             model: torch.nn.Module,
             method: str = default_method,
             perp: bool = False,
-            normalize: str = default_normalize,
+            normalize: Optional[str] = default_normalize,
             bound: bool = False,
             seed: Optional[int] = default_seed,
             use_cuda: bool = False,

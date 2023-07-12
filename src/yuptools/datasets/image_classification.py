@@ -1,6 +1,8 @@
 from typing import Callable, Optional
 
 import os
+import numpy as np
+import torch
 from torchvision import transforms as tf
 
 from .base import ImageClassificationDataset
@@ -18,8 +20,17 @@ __all__ = [
     "MNIST",
 ]
 
+
+def numpy_image_to_tensor(
+        numpy_image: np.ndarray,
+) -> torch.Tensor:
+    return torch.from_numpy(numpy_image).permute(2, 0, 1)
+
+
 image_classification_transforms = {
     "default": tf.ToTensor(),
+
+    "numpy_to_tensor": numpy_image_to_tensor,
 
     "resize28": tf.Compose([
         tf.Resize((28, 28)),

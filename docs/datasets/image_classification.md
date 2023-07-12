@@ -35,6 +35,9 @@ transform = transforms["default"]
 - **default**:
 Convert a PIL Image or ndarray to tensor and scale the values accordingly.
 
+- **numpy_to_tensor**:
+Convert a ndarray to tensor without scaling.
+
 - **resize28**:
   1) Resize the given PIL Image or ndarray to a 28*28 square size.
   2) Convert the resized image to tensor and scale the values accordingly.
