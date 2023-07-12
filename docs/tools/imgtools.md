@@ -16,7 +16,7 @@ Calculates the entropy of an input image.
 ```
 entropy: float, entropy_mat: torch.Tensor = image_entropy(
     image: torch.Tensor,
-    method: str = "rgb",
+    method: str = "gray",
 )
 ```
 
