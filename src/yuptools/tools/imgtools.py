@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Union
 
 import numpy as np
 import torch
@@ -12,7 +12,8 @@ __all__ = [
 def image_entropy(
         image: torch.Tensor,
         method: str = "gray",
-) -> Tuple[float, torch.Tensor]:
+        return_entropy_mat: bool = True,
+) -> Union[float, Tuple[float, torch.Tensor]]:
     if len(image.shape) == 2:
         image = image.unsqueeze(dim=0)
 
@@ -51,12 +52,16 @@ def image_entropy(
     _probs = list(filter(lambda p: p > 0, np.ravel(probs)))  # probs wo/ zero
     entropy = -np.sum(np.multiply(_probs, np.log2(_probs)))
 
-    # entropy mat
-    entropy_mat = torch.zeros_like(image)
+    if not return_entropy_mat:
+        return entropy
 
-    for i in range(h):
-        for j in range(w):
-            p = probs[int(image[i][j])]
-            entropy_mat[i][j] = -p * np.log2(p)
+    else:
+        # entropy mat
+        entropy_mat = torch.zeros_like(image)
 
-    return entropy, entropy_mat
+        for i in range(h):
+            for j in range(w):
+                p = probs[int(image[i][j])]
+                entropy_mat[i][j] = -p * np.log2(p)
+
+        return entropy, entropy_mat
