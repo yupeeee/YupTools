@@ -71,6 +71,7 @@ import yuptools
 - tools
     - [attrtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/attrtools.md)
     - [dictools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/dictools.md)
+    - [imgtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/imgtools.md)
     - [linalgtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/linalgtools.md)
     - [listools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/listools.md)
     - [pathtools](https://github.com/yupeeee/YupTools/blob/main/docs/tools/pathtools.md)
